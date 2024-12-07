@@ -1,0 +1,96 @@
+/* Stiluri generale */
+body {
+    background-color: #f8f9fa; /* Open background for the application */
+    font-family: Arial, sans-serif;
+}
+
+/* Titlu principal */
+h1 {
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray */
+}
+
+/* Secțiuni */
+#categorySection, #documentSection {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #ffffff; /* White background for sections */
+    border: 1px solid #dee2e6; /* Subtle edge */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shade*/
+}
+
+/* Titluri de secțiuni */
+h2 {
+    color: #495057; /* Moderate gray */
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Listă categorii */
+#categoryList {
+    max-height: 300px; /* Înălțime maximă pentru listă */
+    overflow-y: auto; /* Scrolling if necessary */
+}
+
+/* The items in the list*/
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da; /* Subtle border between elements */
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+}
+
+/* Delete button */
+button.btn-danger {
+    color: #fff;
+    background-color: #e3342f; /* Red*/
+    border-color: #e3342f;
+}
+
+button.btn-danger:hover {
+    background-color: #cc1f1a;
+    border-color: #b21a17;
+}
+
+/* Categories dropdown */
+#categorySelect {
+    margin-bottom: 1rem;
+}
+
+/* Fiels */
+#fileInput {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* List of documents */
+#documentList {
+    max-height: 300px; /* Maximum height for documents */
+    overflow-y: auto; /* Scroll for many documents */
+}
+
+#documentList li {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    background-color: #f1f3f5; /* Light gray */
+    border-radius: 5px;
+}
+
+/* Download link */
+a.btn-link {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+a.btn-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
