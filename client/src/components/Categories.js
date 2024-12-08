@@ -10,7 +10,7 @@ const Categories = () => {
       return;
     }
     setCategories([...categories, newCategory]);
-    setNewCategory(""); // Resetează câmpul de input
+    setNewCategory(""); // Resets the input field
   };
 
   const deleteCategory = (index) => {

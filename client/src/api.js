@@ -5,7 +5,7 @@ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
 export const getCategories = async () => {
   const response = await fetch(`${API_URL}/categories`);
   if (!response.ok) {
-    throw new Error('Eroare la obținerea categoriilor');
+    throw new Error('Error getting categories');
   }
   return response.json();
 };
@@ -17,7 +17,7 @@ export const createCategory = async (categoryData) => {
     body: JSON.stringify(categoryData),
   });
   if (!response.ok) {
-    throw new Error('Eroare la crearea categoriei');
+    throw new Error('Error creating category');
   }
   return response.json();
 };
@@ -26,7 +26,7 @@ export const createCategory = async (categoryData) => {
 export const getDocuments = async () => {
   const response = await fetch(`${API_URL}/documents`);
   if (!response.ok) {
-    throw new Error('Eroare la obținerea documentelor');
+    throw new Error('Error getting documents');
   }
   return response.json();
 };
@@ -38,7 +38,7 @@ export const createDocument = async (documentData) => {
     body: JSON.stringify(documentData),
   });
   if (!response.ok) {
-    throw new Error('Eroare la crearea documentului');
+    throw new Error('Error creating the document');
   }
   return response.json();
 };

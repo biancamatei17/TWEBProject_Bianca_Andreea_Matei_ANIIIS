@@ -1,6 +1,6 @@
 // client/components/CategoryList.js
 import React, { useEffect, useState } from 'react';
-import { getCategories } from '../api'; // Importă funcția getCategories din api.js
+import { getCategories } from '../api'; // Imports the getCategories function from api.js
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([]);
@@ -20,7 +20,7 @@ const CategoryList = () => {
   }, []);
 
   if (error) return <p>{error}</p>;
-  if (!categories.length) return <p>Se încarcă...</p>;
+  if (!categories.length) return <p>Loading...</p>;
 
   return (
     <ul>

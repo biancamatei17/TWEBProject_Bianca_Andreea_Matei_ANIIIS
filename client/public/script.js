@@ -51,7 +51,7 @@ function renderCategoryOptions() {
     });
 }
 
-// Adaugă un document nou
+// Add a new document
 function addDocument(category, name, description, file) {
     if (!category || !name || !file) return alert('Toate câmpurile sunt obligatorii!');
     const document = { category, name, description, file };
@@ -59,13 +59,13 @@ function addDocument(category, name, description, file) {
     renderDocuments(category);
 }
 
-// Șterge un document după index
+// Delete a document by index
 function deleteDocument(index) {
     documents.splice(index, 1);
-    renderDocuments(); // Reafișează documentele
+    renderDocuments(); // Display Documents
 }
 
-// Afișează documentele dintr-o categorie selectată
+// Display the documents from a selected category
 function renderDocuments(selectedCategory) {
     const documentList = document.getElementById('documentList');
     documentList.innerHTML = '';
@@ -92,7 +92,7 @@ function renderDocuments(selectedCategory) {
         });
 }
 
-// Event Listeners pentru butoane
+// Event Listeners for buttons
 document.getElementById('addCategory').onclick = () => {
     const categoryName = document.getElementById('newCategory').value.trim();
     addCategory(categoryName);
@@ -110,7 +110,7 @@ document.getElementById('uploadDocument').onclick = () => {
     document.getElementById('fileInput').value = '';
 };
 
-// Eveniment pentru schimbarea categoriei selectate
+// Event for changing the selected category 
 document.getElementById('categorySelect').onchange = (e) => {
     renderDocuments(e.target.value);
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Importăm fișierul CSS specific pentru App
+import './App.css'; // We import the App-specific CSS file
 import CategoryList from './components/CategoryList';
 import CreateCategory from './components/CreateCategory';
 import DocumentList from './components/DocumentList';

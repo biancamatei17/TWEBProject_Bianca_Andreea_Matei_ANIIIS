@@ -1,6 +1,6 @@
 // client/components/CreateCategory.js
 import React, { useState } from 'react';
-import { createCategory } from '../api'; // Importă funcția createCategory din api.js
+import { createCategory } from '../api'; // Import the createCategory function from api.js
 
 const CreateCategory = () => {
   const [name, setName] = useState('');
@@ -11,7 +11,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       await createCategory({ name, description });
-      alert('Categoria a fost creată cu succes!');
+      alert('Category successfully created!');
       setName('');
       setDescription('');
     } catch (err) {
@@ -22,7 +22,7 @@ const CreateCategory = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Nume categorie:</label>
+        <label>Category Name:</label>
         <input
           type="text"
           value={name}
@@ -30,14 +30,14 @@ const CreateCategory = () => {
         />
       </div>
       <div>
-        <label>Descriere:</label>
+        <label>Description:</label>
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <button type="submit">Creează</button>
+      <button type="submit">Create</button>
     </form>
   );
 };

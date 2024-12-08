@@ -18,7 +18,7 @@ const Document = sequelize.define(
     },
     externalLink: {
       type: DataTypes.STRING,
-      allowNull: true, // Schimbă acest "false" în "true" pentru a face acest câmp opțional
+      allowNull: true, // Change this "false" to "true" to make this field optional
     },
   },
   { 

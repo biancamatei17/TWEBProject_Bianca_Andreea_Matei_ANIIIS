@@ -1,27 +1,27 @@
 const express = require('express');
-const sequelize = require('./database/sequelize'); // Conexiunea la baza de date
-const { Category, Document } = require('./models/associations'); // Modelele centralizate
-const categoryRoutes = require('./routes/categoryRoutes'); // Importă rutele pentru categorii
-const documentRoutes = require('./routes/documentRoutes'); // Importă rutele pentru documente
+const sequelize = require('./database/sequelize'); // Database connection
+const { Category, Document } = require('./models/associations'); // Centralized models
+const categoryRoutes = require('./routes/categoryRoutes'); // Import routes for categories
+const documentRoutes = require('./routes/documentRoutes'); // Import routes for documents
 
 const app = express();
 app.use(express.json());
 
-// Testarea conexiunii și sincronizarea bazei de date
+// Test database connection and synchronize
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Conexiunea la baza de date a fost realizată cu succes!');
-    return sequelize.sync({ force: false }); // Sincronizare fără ștergerea datelor existente
+    console.log('Database connection established successfully!');
+    return sequelize.sync({ force: false }); // Synchronize without deleting existing data
   })
-  .catch((err) => console.error('Eroare la conectarea bazei de date:', err));
+  .catch((err) => console.error('Error connecting to the database:', err));
 
-// Ruta de test
-app.get('/', (req, res) => res.send('Serverul funcționează!'));
+// Test route
+app.get('/', (req, res) => res.send('Server is running!'));
 
-// Configurează rutele cu prefixul `/api`
+// Set up routes with the `/api` prefix
 app.use('/api/categories', categoryRoutes);
 app.use('/api/documents', documentRoutes);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Serverul rulează pe portul ${PORT}`));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

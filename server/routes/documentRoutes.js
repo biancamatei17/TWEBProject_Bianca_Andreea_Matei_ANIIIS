@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', getDocuments);
 router.post('/', createDocument);
-router.put('/:id', updateDocument); // Adaugă ruta pentru PUT
+router.put('/:id', updateDocument);
 router.delete('/:id', deleteDocument);
 
 module.exports = router;

@@ -2,7 +2,7 @@
 const Category = require('./Category');
 const Document = require('./Document');
 
-// Definirea relațiilor
+// Defining relationships
 Document.belongsTo(Category, { foreignKey: 'categoryId' });
 Category.hasMany(Document, { foreignKey: 'categoryId' });
 
